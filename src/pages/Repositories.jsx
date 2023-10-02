@@ -34,9 +34,9 @@ const Repositories = () => {
 
         try {
 
-            repositorio.map(async (repo) => {
+            repositorio.map(async (reps) => {
 
-                const repoName = repo.name
+                const repoName = reps.name
 
                 const busca = await GetPrintRepo(repoName)
                 const PrintPromises = await Promise.all(busca)
@@ -52,21 +52,29 @@ const Repositories = () => {
 
     }
 
-    async function getLanguagesPre(repoName) {
+    async function getLanguagesPre() {
 
-        const linguagens = await getLanguages(repoName);
+        try {
 
-        const prometendoLinguagens = await Promise.all(linguagens)
+            const repoName = reps.name
 
-        setLanguages(prometendoLinguagens)
+            const linguagens = await getLanguages(repoName);
+
+            const prometendoLinguagens = await Promise.all(linguagens)
+            setLanguages(prometendoLinguagens)
+
+        } catch (error) {
+            console.log('erro ao captar as linguagens', error)
+        }
+
     }
 
     function mostrarMais() { setHovered(true) }
 
     function mostrarMenos() { setHovered(false) }
 
-    function funcaoExecutora(){
-        mostrarMais() 
+    function funcaoExecutora() {
+        mostrarMais()
         getLanguagesPre()
     }
 

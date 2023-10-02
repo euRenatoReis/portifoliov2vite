@@ -34,9 +34,9 @@ const Repositories = () => {
 
         try {
 
-            repositorio.map(async (reps) => {
+            repositorio.map(async () => {
 
-                const repoName = reps.name
+                
 
                 const busca = await GetPrintRepo(repoName)
                 const PrintPromises = await Promise.all(busca)

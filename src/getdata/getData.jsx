@@ -50,10 +50,10 @@ export const GetPrintRepo = async (repoName) => {
 
 }
 
-export const getLanguages = async (repoName) => {
+/* export const getLanguages = async (repoName) => {
 
     const pegarLanguages = await fetch(`https://api.github.com/repos/euRenatoReis/${repoName}/languages`)
     const LanguagesJson = pegarLanguages.json()
     
     return LanguagesJson
-}
+} */

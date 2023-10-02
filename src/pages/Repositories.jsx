@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react"
-import { GetRepositories, GetPrintRepo, getLanguages } from "../getData/getData";
+import { GetRepositories, GetPrintRepo, /* getLanguages */ } from "../getData/getData";
 import { ThemeContext } from "../services/themeContext";
 import styled from "styled-components";
 import { borderPasseio, surgimento } from "../animacoes/animacoes";
@@ -7,7 +7,7 @@ import { borderPasseio, surgimento } from "../animacoes/animacoes";
 const Repositories = () => {
 
     const [repositorio, SetRepositorio] = useState([])
-    const [languages, setLanguages] = useState([])
+  /*   const [languages, setLanguages] = useState([]) */
     const { theme } = useContext(ThemeContext)
     const [hovered, setHovered] = useState(false)
 
@@ -52,7 +52,7 @@ const Repositories = () => {
 
     }
 
-    async function getLanguagesPre() {
+ /*    async function getLanguagesPre() {
 
         try {
 
@@ -67,7 +67,7 @@ const Repositories = () => {
             console.log('erro ao captar as linguagens', error)
         }
 
-    }
+    } */
 
     function mostrarMais() { setHovered(true) }
 
@@ -75,7 +75,7 @@ const Repositories = () => {
 
     function funcaoExecutora() {
         mostrarMais()
-        getLanguagesPre()
+        /* getLanguagesPre() */
     }
 
     useEffect(() => {
@@ -109,11 +109,11 @@ const Repositories = () => {
                                         <div className="more-information">
                                             <p>{reps.full_name}</p>
                                             <ul className="linguagens">
-                                                {languages.map((linguage, index) => (
+                                              {/*   {languages.map((linguage, index) => (
                                                     <li key={index}>
                                                         {linguage}
                                                     </li>
-                                                ))}
+                                                ))} */}
                                             </ul>
                                             <p>estrelas:{reps.stargazers_count}</p>
                                         </div>

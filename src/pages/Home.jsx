@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../services/themeContext";
 import styled from "styled-components";
-import { Imagem3D } from "../imagens/imagemHome";
 import { indoDireita, surgimento } from "../animacoes/animacoes";
 
 const Home = () => {

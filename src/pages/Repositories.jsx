@@ -153,7 +153,10 @@ const RepositoriesEstilo = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  max-height: 100%;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  height: 100%;
   gap: 10px;
   background-color: ${props => props.theme.backgroundTelas};
 

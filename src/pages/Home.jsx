@@ -47,16 +47,18 @@ color: ${props => props.theme.color};
 
 `
 
-const PictureHome = styled.div`
+const PictureHome = styled.img`
 
    display:flex;
    width: 450px;
    height: 250px;
-   align-items: center;
-   justify-content: center;
-   background-color: red;
-   background-image: url(./imagens/pc_animation.gif);
+   background-color: ${props => props.theme.backgroundTelas};
+   background-image: url(../public/imagens/quarto-render.png);
+   background-size: contain;
    animation: ${surgimento} 1s running;
+   border: 0px;
+   margin: 0px;
+
 `
 
 

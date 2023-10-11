@@ -120,7 +120,7 @@ export const esferaLinkedinAnimada = keyframes`
 export const esferaWattsAppAnimada = keyframes`
 
 0%{ top: 0; }
-100% {top: 50%}
+100% {top: 50%;}
 
 `
 

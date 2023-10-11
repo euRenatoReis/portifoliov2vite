@@ -24,8 +24,6 @@ export const indoDireita = keyframes`
 
 export const borderPasseio = keyframes`
 
-
-
 0%{ border-top: solid 1px var(--varcolorAnim); border-right: solid 1px ${props => props.theme.border} ; border-bottom: solid 1px ${props => props.theme.border} ; border-left: solid 1px ${props => props.theme.border} ;}
 12%{ border-right: solid 1px var(--varcolorAnim); border-top: solid 1px ${props => props.theme.border} ;  border-bottom: solid 1px ${props => props.theme.border} ; border-left: solid 1px ${props => props.theme.border} ;}
 37%{ border-bottom: solid 1px var(--varcolorAnim); border-top: solid 1px ${props => props.theme.border} ; border-left: solid 1px ${props => props.theme.border} ;  border-right: solid 1px ${props => props.theme.border} ;}
